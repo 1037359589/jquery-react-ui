@@ -1,0 +1,14 @@
+{
+  "name": "jquery-react-ui",
+  "version": "1.0.0",
+  "description": "利用jquery/react和css3的ui",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pzl",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
