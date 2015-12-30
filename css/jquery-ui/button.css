@@ -65,3 +65,21 @@ button[class~='border-light']{
 	border: 1px solid #fbeac0;
 }
 /*no-bg*/
+button[class~='no-bg']{
+	background: none!important;
+}
+button[class~='no-bg']:hover{
+	background: #ddd!important;
+}
+button[class~='danger']{
+	color:#ff0000;
+}
+button[class~='warning']{
+	color:#00ff00;
+}
+button[class~='success']{
+	color:#fa3333;
+}
+button[class~='primary']{
+	color:#01b7f3;
+}
