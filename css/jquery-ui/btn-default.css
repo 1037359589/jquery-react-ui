@@ -1,0 +1,4 @@
+button[class*="default"]{
+	color:#000;
+	background: #f0f0f0;
+}
