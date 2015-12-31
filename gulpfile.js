@@ -6,6 +6,7 @@ var concat=require('gulp-concat');
 var jquery=require('gulp-jquery');
 var rename=require('gulp-rename');
 var minCss=require('gulp-minify-css');
+// var es2015=require('babel-preset-es2015');
 
 
 gulp.task('jquery-ui-js',function(){
