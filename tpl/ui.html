@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href='../dest/own-ui/jquery-ui.min.css'>
+		<link rel="stylesheet" href='../dest/own-ui/own-ui.min.css'>
 		<title></title>
 	</head>
 	<body style="background:#f5f5f5;">
@@ -20,7 +20,7 @@
 			<button class="btn default larger black hover">
 				DEFAULT
 			</button>
-			<button class="btn default larger blue hover">
+			<button class="btn default larger blue hover"  data-mousedown="true">
 				DEFAULT
 			</button>
 		</div>
@@ -35,7 +35,7 @@
 			<button class="btn border-green normal hover">
 				BUTTON-BORDER-GREEN
 			</button>
-			<button class="btn border-light normal hover">
+			<button class="btn border-light normal hover"  data-mousedown="true">
 				BUTTON-BORDER-GREEN
 			</button>
 		</div>
@@ -50,10 +50,68 @@
 			<button class="btn no-bg success normal hover">
 				BUTTON-BORDER-SUCCESS
 			</button>
-			<button class="btn no-bg primary normal hover">
+			<button class="btn  primary normal" data-mousedown="true">
 				BUTTON-BORDER-PRIMARY
 			</button>
 		</div>
-		<script></script>
+        <!--link-->
+        <div style='margin-bottom:20px;'>
+            <!--link-default-->
+            <a href="" class=" small hover">
+                LINK-SMALL
+            </a>
+            <a href="" class=" normal hover">
+                LINK-NORMAL
+            </a>
+            <a href="" class=" big hover">
+                LINK-BIG
+            </a>
+            <a href="" class=" larger hover">
+                LINK-LARGER
+            </a>
+        </div>
+
+        <!--link-border-->
+        <div style="margin-bottom:20px;">
+            <a href="" class="border small hover">
+                LINK-BIG
+            </a>
+            <a href="" class=" normal hover border-info">
+                LINK-BIG
+            </a>
+            <a href="" class=" big hover border-success">
+                LINK-BIG
+            </a>
+            <a href="" class=" larger hover border-error">
+                LINK-BIG
+            </a>
+        </div>
+
+        <!--link-bg-->
+        <div style="margin-bottom:20px;">
+            <a href="" class="bg small ">
+                LINK-BIG
+            </a>
+            <a href="" class=" bg-success normal">
+                LINK-BIG
+            </a>
+            <a href="" class="bg-error big  ">
+                LINK-BIG
+            </a>
+            <a href="" class=" bg-warning larger ">
+                LINK-BIG
+            </a>
+        </div>
+        <!--link-hover-other-->
+        <div style="margin-bottom:20px;">
+            <a href="" class="normal bracket ">
+                LINK-normal
+            </a>
+            <a href="" class="normal rotate-up ">
+                 <span  data-hover="LINK-normal"> LINK-normal</span>
+            </a>
+        </div>
+        <script src="../js/ui/jquery-1.11.3.min.js"></script>
+        <script src="../dest/ui/own-ui.min.js"></script>
 	</body>
 </html>

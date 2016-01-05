@@ -1,4 +1,3 @@
-
 button[class~='btn']{
 	display: inline-block;
 	padding:0 16px;
@@ -10,6 +9,9 @@ button[class~='btn']{
 	-moz-transition:all 0.3s ease-in;
 	-o-transition:all 0.3s ease-in;
 	background: none;
+    position: relative;
+    z-index:5;
+    overflow: hidden;
 }
 button[class~='hover']:hover{
 	box-shadow: 0px 4px 4px 0 rgba(0,0,0,.1);
@@ -83,4 +85,27 @@ button[class~='success']{
 }
 button[class~='primary']{
 	color:#01b7f3;
+}
+.btn-mouse-down{
+    display: inline-block;
+    position: absolute;
+    z-index:6;
+    width:2px;
+    height:2px;
+    border-radius: 100%;
+    animation:btn-animate 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-animation:btn-animate 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-animation:btn-animate 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-animation:btn-animate 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -ms-animation:btn-animate 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes btn-animate{
+    0% {
+        box-shadow: 0 0 0 0px rgba(66, 166, 223, 0.7);
+        background: rgba(66, 166, 223, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 300px rgba(66, 166, 223, 0);
+        background: rgba(66, 166, 223, 0);
+    }
 }
