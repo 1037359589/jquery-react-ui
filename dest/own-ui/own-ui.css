@@ -110,6 +110,9 @@ button[class~='primary']{
     }
 }
 a{
+    margin-left:20px;
+}
+a{
     text-decoration: none;
     display: inline-block;
     padding:0px 10px;
@@ -202,7 +205,7 @@ a[class~='bracket']:hover:after{
     -o-transform:translate(5px,0);
     -moz-transform:translate(5px,0);
 }
-.rotate-up{
+a[class~='rotate-up']{
     display: inline-block;
     position: relative;
     background: #ddd;
@@ -220,10 +223,10 @@ a[class~='bracket']:hover:after{
     /*transform:rotateX(90deg);*/
     transition:all 0.3s linear;
 }
-.rotate-up >span{
+a[class~='rotate-up'] >span{
     display: inline-block;
 }
-.rotate-up>span:before{
+a[class~='rotate-up']>span:before{
     content:attr(data-hover);
     display: inline-block;
     position: absolute;
@@ -234,12 +237,132 @@ a[class~='bracket']:hover:after{
     background: rgba(0,0,0,.2);
     color:#fff;
     text-align: center;
-    transform-origin: 50% 0;
-    -webkit-transform-origin: 50% 0;
-    transform:rotateX(-90deg)
+    transform-origin:top;
+    -webkit-transform-origin:top;
+    transform:rotateX(-90deg);
     -webkit-transform:rotateX(-90deg)
 }
-.rotate-up:hover{
+a[class~='rotate-up']:hover{
     -webkit-transform:rotateX(90deg);
     transform:rotateX(90deg);
+}
+a[class~='open-right']{
+    color:#fff;
+    position: relative;
+    padding:0px;
+    overflow: hidden;
+}
+a[class~='open-right']:before{
+    content: attr(data-hover);
+    display: inline-block;
+    width:100%;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    height:100%;
+    float: left;
+    background: #eee;
+    color:#000;
+    text-align: center;
+    z-index:5;
+    /*box-sizing: border-box;*/
+    transform:translateX(-25%);
+}
+a[class~='open-right']:before,
+a[class~='open-right'] >span{
+    -webkit-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+}
+a[class~='open-right'] >span{
+    display: block;
+    position: relative;
+    z-index:10;
+    padding:0 10px;
+    background: #666;
+    transform:translateX(0);
+}
+a[class~='open-right']:hover:before{
+    transform:translateX(0%);
+}
+a[class~='open-right']:hover>span{
+    transform:translateX(100%);
+}
+a[class~="underline-text"]{
+   background: transparent;
+    position: relative;
+    padding:0px;
+}
+a[class~="underline-text"]>span{
+    color:#ddd;
+    display: inline-block;
+}
+a[class~="underline-text"]:before{
+    content:attr(data-hover);
+    display: inline-block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    color:#666;
+    box-sizing: border-box;
+    border-bottom:2px solid #666;
+    width:0px;
+    transition:all 0.3s linear;
+    overflow: hidden;
+    white-space: nowrap;
+}
+a[class~="underline-text"]:hover:before{
+    width: 100%;
+}
+a[class~="circle"]{
+    color:#ddd;
+    position: relative;
+    box-sizing: border-box;
+}
+a[class~="circle"]:before{
+    content:"";
+    display: inline-block;
+    position:absolute;
+    left:0px;
+    top:-42.5px;
+    width:113px;
+    height:113px;
+    border-radius: 100%;
+    border:2px solid #ddd;
+    opacity: 0;
+}
+a[class~="circle"]:after{
+    content:"";
+    display: inline-block;
+    position:absolute;
+    left:-6px;
+    top:-48.5px;
+    width:123px;
+    height:123px;
+    border-radius: 100%;
+    border:3px solid #ddd;
+    opacity: 0;
+}
+a[class~="circle"]:before,
+a[class~="circle"]:after{
+    transform-origin:50% 50%;
+    transition:all 0.3s ease-in;
+    -webkit-transition:all 0.3s ease-in;
+    -o-transition:all 0.3s ease-in;
+    -moz-transition:all 0.3s ease-in;
+}
+a[class~="circle"]:hover:before{
+    opacity: 1;
+    width:123px;
+    height:123px;
+    left:-5px;
+    top:-47.5px;
+}
+a[class~="circle"]:hover:after{
+    opacity: 1;
+    width:133px;
+    height:133px;
+    left:-11px;
+    top:-53.5px;
 }
