@@ -255,3 +255,110 @@ a[class~="circle"]:hover:after{
     left:-11px;
     top:-53.5px;
 }
+a[class~="double-box"]{
+   color:#666;
+    position: relative;
+    border:2px solid #eee;
+}
+a[class~="double-box"] > span{
+    line-height: 200%;
+}
+a[class~="double-box"] > span,
+a[class~="double-box"]:before,
+a[class~="double-box"]{
+    -webkit-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+}
+a[class~="double-box"]:before{
+    content: "";
+    display: inline-block;
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:10px;
+    top:-10px;
+    border:2px solid #666;
+    opacity: 0;
+}
+a[class~="double-box"]:hover{
+    border:2px solid transparent;
+}
+a[class~="double-box"]:hover>span{
+      color:#333;
+}
+a[class~="double-box"]:hover:before{
+    opacity: 1;
+    left:-2px;
+    top:-2px;
+}
+a[class~="text-shadow"]{
+    position: relative;
+}
+a[class~="text-shadow"]>span{
+    color:#666;
+}
+a[class~="text-shadow"]:before{
+   content:attr(data-hover);
+    display: inline-block;
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    transform-origin:100% 0%;
+    -webkit-transform-origin:100% 0%;
+    transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+    -o-transform:rotate(20deg);
+    -moz-transform:rotate(20deg);
+    -ms-transform:rotate(20deg);
+    opacity: 0;
+}
+a[class~="text-shadow"],
+a[class~="text-shadow"]>span,
+a[class~="text-shadow"]:before{
+    -webkit-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+}
+a[class~="text-shadow"]:hover>span{
+    color:#333;
+}
+a[class~="text-shadow"]:hover:before{
+    right:10px;
+    top:0px;
+    transform:rotate(0deg);
+    opacity: 1;
+}
+a[class~="underline"]{
+    position: relative;
+}
+a[class~="underline"] > span{
+    color:#666;
+}
+a[class~="underline"]:after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom:-10px;
+    width:100%;
+    height:2px;
+    background: #333;
+    opacity: 0;
+}
+a[class~="underline"]>span,
+a[class~="underline"]:after{
+    -webkit-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+}
+a[class~="underline"]:hover>span{
+    color:#333;
+}
+a[class~="underline"]:hover:after{
+    opacity: 1;
+    bottom:0px;
+}
